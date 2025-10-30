@@ -144,35 +144,11 @@ def crawl_page(page, proxies_list, user_agents, base_url, category, page_size, h
 
 # 设置请求头和cookie
 headers = {
-    "accept": "*/*",
-    "accept-language": "zh-CN,zh;q=0.9",
-    "content-type": "application/json",
-    "origin": "https://african.business",
-    "priority": "u=1, i",
-    "referer": "https://african.business/sectors/trade-investment",
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-origin",
-    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+
 }
 
 cookies = {
-    "sbjs_migrations": "1418474375998%3D1",
-    "sbjs_current_add": "fd%3D2025-10-26%2011%3A39%3A37%7C%7C%7Cep%3Dhttps%3A%2F%2Fafrican.business%2F%7C%7C%7Crf%3Dhttps%3A%2F%2Fnewafricanmagazine.com%2F",
-    "sbjs_first_add": "fd%3D2025-10-26%2011%3A39%3A37%7C%7C%7Cep%3Dhttps%3A%2F%2Fafrican.business%2F%7C%7C%7Crf%3Dhttps%3A%2F%2Fnewafricanmagazine.com%2F",
-    "sbjs_current": "typ%3Dreferral%7C%7C%7Csrc%3Dnewafricanmagazine.com%7C%7C%7Cmdm%3Dreferral%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%2F%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29",
-    "sbjs_first": "typ%3Dreferral%7C%7C%7Csrc%3Dnewafricanmagazine.com%7C%7C%7Cmdm%3Dreferral%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%2F%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29",
-    "sbjs_udata": "vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F141.0.0.0%20Safari%2F537.36",
-    "pvc_visits[0]": "1761480576b6",
-    "_gid": "GA1.2.1813527281.1761478783",
-    "sbjs_session": "pgs%3D4%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fafrican.business%2Fsectors%2Ftrade-investment",
-    "_ga_X77FQJQ9RH": "GS2.1.s1761478777$o1$g1$t1761478860$j38$l0$h0",
-    "_ga": "GA1.2.1233674367.1761478778",
-    "advanced_ads_visitor": "%7B%22browser_width%22%3A340%7D",
-    "ph_phc_m2tqT5xhHNVwcxUZXNRkTpF4CtAytIRLWBEicLZFCuu_posthog": "%7B%22distinct_id%22%3A%22019a2051-22a2-7ed6-b2ce-00cbf7b726fe%22%2C%22%24sesid%22%3A%5B1761478931945%2C%22019a2051-22b9-7e02-8c90-dc5d52841f65%22%2C1761478779565%5D%2C%22%24initial_person_info%22%3A%7B%22r%22%3A%22https%3A%2F%2Fnewafricanmagazine.com%2F%22%2C%22u%22%3A%22https%3A%2F%2Fafrican.business%2F%22%7D%7D"
+
 }
 
 base_url = "https://african.business/wp-content/themes/IC_Publications/api/get-posts.php"
@@ -258,3 +234,4 @@ with open(csv_filename, 'w', newline='', encoding='utf-8') as csvfile:
         writer.writerow(data_item)
 
 print(f"数据爬取完成，共获取 {len(all_data)} 条数据，已保存到 {csv_filename}")
+
